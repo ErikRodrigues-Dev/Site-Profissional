@@ -6,7 +6,7 @@
 
 body {
     font-family: 'roboto' , sans-serif;
-
+    
 }
 
 a{
@@ -55,6 +55,11 @@ a{
 
 #navbar-items li {
     padding: 10px;
+}
+
+#navbar-items li a:hover {
+    color: rgb(0, 0, 0);
+    
 }
 
 #profile {
@@ -107,12 +112,14 @@ a{
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;    
+    grid-column-gap: 50px;   
+    text-align: center;
 }
 
 .proj-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #000;
     padding: 20px;
     border-radius: 5px;
@@ -124,8 +131,8 @@ a{
 
 
 .btn-projetos {
-    width: 15%;
-    margin-top: 5px;
+    width: 160px;
+    margin-top: 15px;
     padding: 5px ;
     background-color: #eee;
     color: #000;
@@ -139,7 +146,6 @@ a{
     background-color: rgb(63, 63, 63);
     color: #eee;
     transition: width 2s linear 1s;
-
 }
 
 .title-projects {
@@ -168,9 +174,11 @@ a{
 
 
 .btn-cv {
+    width: 220px;
     display: inline-block;
     padding: 15px 15px;
     font-size: 1.1rem;
+    text-align: center;
     text-transform: uppercase;
     background: rgb(0, 0, 0);
     border-radius: 5px;
@@ -182,11 +190,39 @@ a{
     background: rgb(70, 68, 68);
 }
 
+
 #footer {
     background: #222;
     color: #eee;
     padding: 30px;
     text-align: center;
+}
+
+@media (max-width:1024px) {
+    .proj-container{
+        width: 100%;
+        text-align: center;
+    }
+
+    #projects-container img {
+        width: 160px;
+    }
+
+    .btn-cv {
+        width: 160px;
+        text-align: center;
+    }
+    
+    .btn-cv:hover {
+        cursor: pointer;
+        background: rgb(70, 68, 68);
+    }
+
+    .btn-projetos {
+        width: 130px;        
+       
+    }
+    
 }
 
 @media (max-width:768px) {
@@ -215,7 +251,7 @@ a{
     }
 
     #contacts {
-        padding: 5px;
+        padding: 1px;
     }
 
     .contacts-container {
@@ -224,13 +260,6 @@ a{
 
     .btn-projetos {
         width: 25%;
-        margin-top: 5px;
-        padding: 5px ;
-        background-color: #eee;
-        color: #000;
-        text-align: center;
-        border-radius: 5px;
-        font-weight: bold;
     }
     
     .btn-projetos:hover {
@@ -238,6 +267,15 @@ a{
         cursor:pointer;
         color: #eee;
         transition: width 2s linear 1s;
+    }
+
+    .btn-cv {
+        width: 300px;
+      
+    }
     
+    .btn-cv:hover {
+        cursor: pointer;
+        background: rgb(70, 68, 68);
     }
 }
